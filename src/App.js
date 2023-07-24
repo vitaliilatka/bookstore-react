@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './App.css';
+import './styles.css';
 import { Route, Switch } from 'react-router-dom';
 import { Provider } from './context/Context';
 import Navbar from './components/Navbar';
@@ -13,6 +13,7 @@ function App() {
   return (
     <Provider>
       <div className='App'>
+        <Header />
         <Navbar />
         <Switch>
           <Route
