@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" component={Books} />
         <Route path="/books/:id" component={BookDetails} />
         <Route path="/about" component={About} />
-        <Route path="/book-cart" component={BookCart} />
+        <Route path="/cart" component={BookCart} /> {/*Adding BookCart to Route*/}
         <Route path="/book-details/:id" component={BookDetails} />
         {/* </Switch> */}
       </div>
