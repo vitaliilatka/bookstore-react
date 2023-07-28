@@ -8,6 +8,7 @@ import Books from './components/Books';
 import About from './components/About';
 import BookCart from './components/BookCart';
 import BookDetails from './components/BookDetails';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className='App'>
         <Header />
         <Navbar />
+        <Search />
         {/* <Switch> */}
         <Route exact path="/" component={Books} />
         <Route path="/books/:id" component={BookDetails} />
