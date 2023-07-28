@@ -16,17 +16,8 @@ function App() {
         <Header />
         <Navbar />
         {/* <Switch> */}
-        <Route
-          exact
-          path="/"
-          component={Books}
-          render={() => (
-            <Fragment>
-              <Header />
-              <Books />
-            </Fragment>
-          )}
-        />
+        <Route exact path="/" component={Books} />
+        <Route path="/books/:id" component={BookDetails} />
         <Route path="/about" component={About} />
         <Route path="/book-cart" component={BookCart} />
         <Route path="/book-details/:id" component={BookDetails} />
