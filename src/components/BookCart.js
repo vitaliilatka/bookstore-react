@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import BookCartItem from "./BookCartItem";
 
 const BookCart = () => {
     //Let we create demo data of order
@@ -16,18 +17,14 @@ const BookCart = () => {
             {cartItems.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (
-                <ul>
+                <div>
                     {cartItems.map((book) => (
-                        <li key={book.id}>
-                            <h3>{book.title}</h3>
-                            <p>Author: {book.author}</p>
-                            <p>Price: ${book.price}</p>
-                        </li>
+                        <BookCartItem key={book.id} book={book} /> //Use component BookCartItem for Each book in cart
                     ))}
-                    <li>
-                        <strong>Total: ${total.toFixed}</strong>
-                    </li>
-                </ul>
+                    <p>
+                        <strong>Total: ${total.toFixed(2)}</strong>
+                    </p>
+                </div>
             )}
             <Link to="/">Back to Home</Link>
             {/*Here is to do button "Order" and EventListener*/}
