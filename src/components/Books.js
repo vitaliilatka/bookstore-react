@@ -19,7 +19,7 @@ const Books = () => {
                         <h3>{book.title}</h3>
                         <p>Author: {book.autor}</p>
                         <p>Price: ${book.price}</p>
-                        <Link to={`/books/${bbok.id}`}>View Details</Link>
+                        <Link to={`/books/${book.id}`}>View Details</Link>
                         {/* {Add button 'Add to cart', and router for it} */}
                     </li>
                 ))}
