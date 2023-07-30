@@ -9,6 +9,7 @@ import About from './components/About';
 import BookCart from './components/BookCart';
 import BookDetails from './components/BookDetails';
 import Search from './components/Search';
+import BookCartCheckOut from './components/BookCartCheckOut';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/books/:id" component={BookDetails} />
         <Route path="/about" component={About} />
         <Route path="/cart" component={BookCart} /> {/*Adding BookCart to Route*/}
+        <Route path='/checkout' component={BookCartCheckOut} />
         <Route path="/book-details/:id" component={BookDetails} />
         {/* </Switch> */}
       </div>
