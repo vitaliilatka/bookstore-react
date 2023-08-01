@@ -3,12 +3,18 @@
     color: #fff;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
+    margin: 0 10px;
 }
 
 .navLink {
     color: #fff;
     text-decoration: none;
+    margin: 0 10px;
     margin-right: 10px;
+}
+
+.navLink:hover {
+    text-decoration: underline;
 }

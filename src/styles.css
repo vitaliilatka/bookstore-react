@@ -16,23 +16,6 @@ h1 {
     text-align: center;
 }
 
-/* nav-styles */
-.navbar {
-    display: flex;
-    justify-content: center;
-    margin: 0 10px;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
 /* styles book-list */
 .book-list {
     display: grid;

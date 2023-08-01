@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import styles from '../styles/Search.module.css';
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -15,14 +16,15 @@ const Search = () => {
 
     return (
         <div>
-            <form onSubmit={handleSearch}>
+            <form className={styles.searchForm} onSubmit={handleSearch}>
                 <input
                     type="text"
                     placeholder="Search books..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    className={styles.searchInput}
                 />
-                <button type="submit">Search</button>
+                <button type="submit" className={styles.searchButton}>Search</button>
             </form>
         </div>
     );
