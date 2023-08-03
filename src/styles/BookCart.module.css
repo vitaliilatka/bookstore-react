@@ -1,0 +1,41 @@
+.bookCartContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cartItemImage {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 19px;
+}
+
+.cartItemTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cartItemPrice {
+    font-size: 16px;
+}
+
+.cartItemQuantity {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.totalPrice {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}

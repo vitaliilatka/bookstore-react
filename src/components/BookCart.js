@@ -20,14 +20,12 @@ const BookCart = () => {
             ) : (
                 <div>
                     {cartItems.map((book) => (
-                        <BookCartItem key={book.id} book={book} /> //Use component BookCartItem for Each book in cart
+                        <BookCartItem key={book.id} book={book} />
                     ))}
-                    <p>
-                        <strong>Total: ${total.toFixed(2)}</strong>
-                    </p>
+                    <p className={styles.totalPrice}>Total: ${total.toFixed(2)}</p>
                 </div>
             )}
-            <Link to="/">Back to Home</Link>
+            <Link to="/" className={styles.backToHomeLink}>Back to Home</Link>
             {/*Here is to do button "Order" and EventListener*/}
         </div>
     );
