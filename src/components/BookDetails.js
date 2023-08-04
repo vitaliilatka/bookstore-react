@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import styles from '../styles/BookDetails.module.css';
 
 const booksData = [
     { id: 1, title: 'Book 1', author: 'Author 1', price: 10.99, description: 'Description of Book 1' },
@@ -11,15 +12,15 @@ const BookDetails = () => {
     const book = booksData.find((book) => book.id === parseInt(id)); //Find a book by ID
 
     if (!book) {
-        return <div>Book not found</div>;
+        return <div className={styles.notFoundMessage}>Book not found</div>;
     }
 
     return (
-        <div>
-            <h2>{book.title}</h2>
-            <p>Author: {book.author}</p>
-            <p>Price: {book.price}</p>
-            <p>{book.description}</p>
+        <div className={styles.bookDetailsContainer}>
+            <h2 className={styles.bookTitle}>{book.title}</h2>
+            <p className={styles.bookAuthor}>Author: {book.author}</p>
+            <p className={styles.bookPrice}>Price: {book.price}</p>
+            <p className={styles.bookDescription}>{book.description}</p>
         </div>
     );
 };
