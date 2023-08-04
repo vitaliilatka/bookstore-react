@@ -1,4 +1,5 @@
 import React from "react";
+import styles from '../styles/BookCartCheckOut.module.css';
 
 const BookCartCheckOut = () => {
     const cartItems = [
@@ -15,31 +16,31 @@ const BookCartCheckOut = () => {
     };
 
     return (
-        <div>
-            <h2>Check Out</h2>
+        <div className={styles.handleCheckoutContainer}>
+            <h2 className={styles.checkOutTitle}>Check Out</h2>
             {cartItems.length === 0 ? (
                 <p>Your cart is empty.</p>
             ) : (
                 <div>
-                    <ul>
+                    <ul className={styles.CartItemsList}>
                         {cartItems.map((book) => (
-                            <li key={book.id}>
-                                <h3>{book.title}</h3>
-                                <p3>Author: {book.author}</p3>
-                                <p>Price: ${book.price}</p>
+                            <li key={book.id} className={styles.cartItem}>
+                                <h3 className={styles.cartItemTitle}>{book.title}</h3>
+                                <p className={styles.cartItemAuthor}>Author: {book.author}</p>
+                                <p className={styles.cartItemPrice}>Price: ${book.price}</p>
                             </li>
                         ))}
                     </ul>
-                    <p>Total: ${total.toFixed(2)}</p>
+                    <p className={styles.totalPrice}>Total: ${total.toFixed(2)}</p>
                     {/*Ordering Form */}
                     <form>
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" required></input>
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" required></input>
-                        <label htmlFor="address">Address</label>
-                        <textarea id="address" rows="4" required />
-                        <button type="button" onClick={handleCheckout}>Place Order</button>
+                        <label className={styles.formLabel} htmlFor="name">Name:</label>
+                        <input className={styles.formInput} type="text" id="name" required></input>
+                        <label className={styles.formLabel} htmlFor="email">Email:</label>
+                        <input className={styles.formInput} label type="email" id="email" required></input>
+                        <label className={styles.formLabel} htmlFor="address">Address</label>
+                        <textarea className={styles.formTextArea} id="address" rows="4" required />
+                        <button className={styles.checkOutButton} type="button" onClick={handleCheckout}>Place Order</button>
                     </form>
                 </div>
             )}

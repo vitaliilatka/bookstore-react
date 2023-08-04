@@ -1,0 +1,69 @@
+.checkOutContainer {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.checkOutTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cartItemsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartItemTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cartItemAuthor {
+    font-size: 1rem;
+    color: #555;
+}
+
+.cartItemPrice {
+    font-size: 1rem;
+    color: #008080;
+}
+
+.totalPrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #008080;
+}
+
+.formLabel {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.formTextArea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.checkOutButton {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
