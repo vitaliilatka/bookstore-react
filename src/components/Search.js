@@ -6,17 +6,18 @@ const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
 
-    const handleSearch = (e) => {
-        e.preventDefault();
-        //Search requesting
+    const handleSearch = (event) => {
+        event.preventDefault();
         if (searchTerm.trim()) {
-            navigate.push(`/search?${searchTerm}`);
+            console.log('Search Term:', searchTerm)
+            navigate(`/search/${(searchTerm)}`);
+            setSearchTerm('');
         }
     };
 
     return (
-        <div>
-            <form className={styles.searchForm} onSubmit={handleSearch}>
+        <div className={styles.searchContainer}>
+            <form className={styles.searchForm} onSubmit={handleSearch} method="GET">
                 <input
                     type="text"
                     placeholder="Search books..."
@@ -28,6 +29,6 @@ const Search = () => {
             </form>
         </div>
     );
-};
+}
 
 export default Search;

@@ -23,6 +23,8 @@ function App() {
         <Route path="/cart" element={<BookCart />} />
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/checkout" element={<BookCartCheckOut />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/search/:searchTerm" element={<BookDetails />} />
       </Routes>
     </div>
   );
