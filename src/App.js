@@ -7,23 +7,24 @@ import Books from './components/Books';
 import About from './components/About';
 import BookCart from './components/BookCart';
 import BookDetails from './components/BookDetails';
+import SearchResults from './components/SearchResults';
 import Search from './components/Search';
 import BookCartCheckOut from './components/BookCartCheckOut';
 import { Route, Routes } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Navbar />
+    <div className='App'>
       <Header />
+      <Navbar />
       <Search />
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="/about" element={<About />} />
-        <Route path="/cart" element={<BookCart />} />
         <Route path="/books/:id" element={<BookDetails />} />
+        <Route path="/cart" element={<BookCart />} />
         <Route path="/checkout" element={<BookCartCheckOut />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search/:searchTerm" element={<SearchResults />} />
         {/* <Route path="/search/:searchTerm" element={<BookDetails />} /> */}
       </Routes>
     </div>

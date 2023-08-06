@@ -1,40 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Search from './Search';
+import booksData from '../data/books.json';
 import styles from '../styles/Books.module.css';
 
 const Books = () => {
-    const books = [
-        {
-            id: 1, title: 'Book 1', author: 'Autor 1', price: 10.99, imageUrl: 'book1.jpg',
-        },
-        {
-            id: 2, title: 'Book 2', author: 'Autor 2', price: 12.99, imageUrl: 'book2.jpg',
-        },
-        {
-            id: 3, title: 'Harry Potter', author: 'Joan Rowling', price: 13.99, imageUrl: 'book3.jpg',
-        },
-    ];
     return (
-        <div className={styles.bookList}>
+        <div className={styles.booksContainer}>
             <h2>Avaliable Books</h2>
             {/* <Search books={books} /> */}
-            <ul>
-                {books.map((book) => (
-                    <li key={book.id} className={styles.bookCard}>
+            <div className={styles.booksList}>
+                {booksData.map((book) => (
+                    <div key={book.id} className={styles.bookCard}>
                         <img
                             src={book.imageUrl}
                             alt={book.title}
                             className={styles.bookImage}
                         />
                         <h3 className={styles.bookTitle}>{book.title}</h3>
-                        <p className={styles.bookAuthor}>Author: {book.author}</p>
+                        <p className={styles.bookAuthor}>Author: {book.authorName}</p>
                         <p>Price: ${book.price}</p>
                         <Link to={`/books/${book.id}`} className={styles.viewDetailsLink}>View Details</Link>
                         {/* {Add button 'Add to cart', and router for it} */}
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
