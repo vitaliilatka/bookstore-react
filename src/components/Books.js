@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import Search from './Search';
 import styles from '../styles/Books.module.css';
 
 const Books = () => {
@@ -10,10 +11,14 @@ const Books = () => {
         {
             id: 2, title: 'Book 2', author: 'Autor 2', price: 12.99, imageUrl: 'book2.jpg',
         },
+        {
+            id: 3, title: 'Harry Potter', author: 'Joan Rowling', price: 13.99, imageUrl: 'book3.jpg',
+        },
     ];
     return (
         <div className={styles.bookList}>
             <h2>Avaliable Books</h2>
+            {/* <Search books={books} /> */}
             <ul>
                 {books.map((book) => (
                     <li key={book.id} className={styles.bookCard}>

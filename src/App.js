@@ -24,7 +24,7 @@ function App() {
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/checkout" element={<BookCartCheckOut />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/search/:searchTerm" element={<BookDetails />} />
+        {/* <Route path="/search/:searchTerm" element={<BookDetails />} /> */}
       </Routes>
     </div>
   );

@@ -1,0 +1,128 @@
+[
+    {
+        "id": "1",
+        "title": "Harry",
+        "coverImageSrc": "",
+        "rating": "3",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "10.99",
+        "description": "",
+        "authorName": "Joa Row"
+    },
+    {
+        "id": "2",
+        "title": "Batman",
+        "coverImageSrc": "",
+        "rating": "2",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "10.99",
+        "description": "",
+        "authorName": "Gothem"
+    },
+    {
+        "id": "3",
+        "title": "Rings",
+        "coverImageSrc": "",
+        "rating": "3",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "11.99",
+        "description": "",
+        "authorName": "Jackson"
+    },
+    {
+        "id": "4",
+        "title": "Hobbit",
+        "coverImageSrc": "",
+        "rating": "4",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "14.99",
+        "description": "",
+        "authorName": "Jackson"
+    },
+    {
+        "id": "5",
+        "title": "Shrek",
+        "coverImageSrc": "",
+        "rating": "3",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "12.99",
+        "description": "",
+        "authorName": "Shrekinger"
+    },
+    {
+        "id": "6",
+        "title": "Moon",
+        "coverImageSrc": "",
+        "rating": "3",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "10.99",
+        "description": "",
+        "authorName": "Mask"
+    },
+    {
+        "id": "7",
+        "title": "Mask",
+        "coverImageSrc": "",
+        "rating": "4",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "13.99",
+        "description": "",
+        "authorName": "Kerry"
+    },
+    {
+        "id": "8",
+        "title": "Matrix",
+        "coverImageSrc": "",
+        "rating": "5",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "18.99",
+        "description": "",
+        "authorName": "Wachowski Brosers"
+    },
+    {
+        "id": "9",
+        "title": "Narnia",
+        "coverImageSrc": "",
+        "rating": "3",
+        "genre": [
+            "",
+            "",
+            ""
+        ],
+        "price": "10.99",
+        "description": "",
+        "authorName": "Lion0807"
+    }
+]

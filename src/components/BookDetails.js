@@ -9,7 +9,7 @@ const booksData = [
 
 const BookDetails = () => {
     const { searchTerm } = useParams(); //Get params route
-    const book = booksData.find((book) => book.title.toLocaleLowerCase().includes(searchTerm.toLowerCase())); //Find a book by ID
+    const book = booksData.find((book) => book.title.toLowerCase().includes(searchTerm.toLowerCase())); //Find a book by ID
 
     if (!book) {
         return <div className={styles.notFoundMessage}>Book not found</div>;
