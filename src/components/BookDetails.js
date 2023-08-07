@@ -5,11 +5,11 @@ import styles from '../styles/BookDetails.module.css';
 
 const BookDetails = () => {
     const { id } = useParams(); //Get params route
-    const book = booksData.find((book) => book.id === Number(id)); //Find a book by ID
+    const book = booksData.find((book) => book.id === id); //Find a book by ID
 
-    if (!book) {
-        return <div className={styles.notFoundMessage}>Book not found</div>;
-    }
+    // if (!book) {
+    //     return <div className={styles.notFoundMessage}>Book not found</div>;
+    // }
 
     return (
         <div className={styles.bookDetailsContainer}>
