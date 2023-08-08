@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "../styles/BookCard.module.css";
 
-const BookCard = ({ book }) => {
+const BookCard = ({ book, addToCart }) => {
     return (
-        <div>
-            <h3>{book.title}</h3>
-            <p>Author: {book.authorName}</p>
-            <Link to={`/books/${book.id}`}>View Details</Link>
+        <div className={styles.bookCard}>
+            <div className={styles.cardButtons}>
+                <h3>{book.title}</h3>
+                <p>Author: {book.authorName}</p>
+                <Link to={`/books/${book.id}`} className={styles.viewDetailsBtn}>View Details</Link>
+                <button onClick={() => addToCart(book)} className={styles.addToCartBtn}>
+                    Add to Cart
+                </button>
+            </div>
         </div>
     );
 };

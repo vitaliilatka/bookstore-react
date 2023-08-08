@@ -3,12 +3,8 @@ import { Link } from 'react-router-dom';
 import BookCartItem from "./BookCartItem";
 import styles from '../styles/BookCart.module.css';
 
-const BookCart = () => {
+const BookCart = ({ cartItems }) => {
     //Let we create demo data of order
-    const cartItems = [
-        { id: 1, title: 'Book 1', author: 'Author 1', price: 10.99, quantity: 2, imageUrl: 'book1.jpg' },
-        { id: 2, title: 'Book 2', author: 'Author 2', price: 12.99, quantity: 1, imageUrl: 'book2.jpg' },
-    ];
 
     const total = cartItems.reduce((sum, book) => sum + book.price * book.quantity, 0);
 
