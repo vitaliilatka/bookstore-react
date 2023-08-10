@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import BookCartItem from "./BookCartItem";
+import { useCart } from "../context/CartContext";
+import BookCard from "./BookCard";
 import styles from '../styles/BookCart.module.css';
 
-const BookCart = ({ cartItems }) => {
-    //Let we create demo data of order
+const BookCart = () => {
+    const { cartItems, removeFromCart } = useCart();
 
-    const total = cartItems.reduce((sum, book) => sum + book.price * book.quantity, 0);
+    const total = cartItems
+        .reduce((sum, book) => sum + parseFloat(book.price) * book.quantity, 0.0);
 
     return (
         <div className={styles.bookCartContainer}>
@@ -16,13 +17,11 @@ const BookCart = ({ cartItems }) => {
             ) : (
                 <div>
                     {cartItems.map((book) => (
-                        <BookCartItem key={book.id} book={book} />
+                        <BookCard key={book.id} book={book} onRemoveFromCart={() => removeFromCart(book.id)} />
                     ))}
                     <p className={styles.totalPrice}>Total: ${total.toFixed(2)}</p>
                 </div>
             )}
-            <Link to="/" className={styles.backToHomeLink}>Back to Home</Link>
-            {/*Here is to do button "Order" and EventListener*/}
         </div>
     );
 };

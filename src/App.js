@@ -8,22 +8,22 @@ import About from './components/About';
 import BookCart from './components/BookCart';
 import BookDetails from './components/BookDetails';
 import SearchResults from './components/SearchResults';
-import Search from './components/Search';
+// import Search from './components/Search';
 import BookCartCheckOut from './components/BookCartCheckOut';
 import { Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
+import booksData from './data/books.json';
 
 const App = () => {
 
   return (
-
-    <div className='App'>
-      <Header />
-      <Navbar />
-      <Search />
-      <CartProvider>
+    <CartProvider>
+      <div className='App'>
+        <Header />
+        <Navbar />
+        {/* <Search /> */}
         <Routes>
-          <Route path="/" element={<Books />} />
+          <Route path="/" element={<Books books={booksData} />} />
           <Route path="/about" element={<About />} />
           <Route path="/books/:id" element={<BookDetails />} />
           <Route path="/cart" element={<BookCart />} />
@@ -31,8 +31,8 @@ const App = () => {
           <Route path="/search/:searchTerm" element={<SearchResults />} />
           {/* <Route path="/search/:searchTerm" element={<BookDetails />} /> */}
         </Routes>
-      </CartProvider>
-    </div>
+      </div>
+    </CartProvider>
   );
 }
 
