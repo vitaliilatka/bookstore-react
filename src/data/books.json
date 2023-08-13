@@ -1,8 +1,8 @@
 [
     {
         "id": "1",
-        "title": "Harry",
-        "cover": "",
+        "title": "Alice's Adventures in Wonderland & Through the Looking-Glass",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327872220l/24213.jpg",
         "rating": "3",
         "genre": [
             "",
@@ -11,12 +11,12 @@
         ],
         "price": "10.99",
         "description": "",
-        "authorName": "Joa Row"
+        "authorName": "Lewis Carroll"
     },
     {
         "id": "2",
-        "title": "Batman",
-        "cover": "",
+        "title": "The Chronicles of Narnia",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449868701l/11127._SY475_.jpg",
         "rating": "2",
         "genre": [
             "",
@@ -25,12 +25,12 @@
         ],
         "price": "10.99",
         "description": "",
-        "authorName": "Gothem"
+        "authorName": "C.S. Lewis"
     },
     {
         "id": "3",
-        "title": "Rings",
-        "cover": "",
+        "title": "The Little Prince",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1367545443l/157993.jpg",
         "rating": "3",
         "genre": [
             "",
@@ -39,12 +39,12 @@
         ],
         "price": "11.99",
         "description": "",
-        "authorName": "Jackson"
+        "authorName": "JacksonAntoine de Saint-Exupéry"
     },
     {
         "id": "4",
-        "title": "Hobbit",
-        "cover": "/images/hobbit.jpg",
+        "title": "A Game of Thrones",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1562726234l/13496.jpg",
         "rating": "4",
         "genre": [
             "",
@@ -53,12 +53,12 @@
         ],
         "price": "14.99",
         "description": "",
-        "authorName": "Jackson"
+        "authorName": "JacksonGeorge R.R. Martin"
     },
     {
         "id": "5",
-        "title": "Shrek",
-        "cover": "",
+        "title": "The Secret Garden",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327873635l/2998.jpg",
         "rating": "3",
         "genre": [
             "",
@@ -67,12 +67,12 @@
         ],
         "price": "12.99",
         "description": "",
-        "authorName": "Shrekinger"
+        "authorName": "Frances Hodgson Burnett"
     },
     {
         "id": "6",
-        "title": "Moon",
-        "cover": "",
+        "title": "The Hunger Games",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1447303603l/2767052.jpg",
         "rating": "3",
         "genre": [
             "",
@@ -81,12 +81,12 @@
         ],
         "price": "10.99",
         "description": "",
-        "authorName": "Mask"
+        "authorName": "Suzanne Collins"
     },
     {
         "id": "7",
-        "title": "Mask",
-        "cover": "",
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474154022l/3._SY475_.jpg",
         "rating": "4",
         "genre": [
             "",
@@ -95,12 +95,12 @@
         ],
         "price": "13.99",
         "description": "",
-        "authorName": "Kerry"
+        "authorName": "J.K. Rowling"
     },
     {
         "id": "8",
-        "title": "Matrix",
-        "cover": "",
+        "title": "Harry Potter and the Order of the Phoenix",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2.jpg",
         "rating": "5",
         "genre": [
             "",
@@ -109,12 +109,12 @@
         ],
         "price": "18.99",
         "description": "",
-        "authorName": "Wachowski Brosers"
+        "authorName": "J.K. Rowling"
     },
     {
         "id": "9",
-        "title": "Narnia",
-        "cover": "",
+        "title": "The Time Traveler's Wife",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1380660571l/18619684.jpg",
         "rating": "3",
         "genre": [
             "",
@@ -123,6 +123,6 @@
         ],
         "price": "10.99",
         "description": "",
-        "authorName": "Lion0807"
+        "authorName": "Audrey Niffenegger"
     }
 ]
