@@ -56,19 +56,28 @@
     color: whitesmoke
 }
 
+.bookCardButtons {
+    display: flex;
+    flex-direction: row;
+}
+
 .bookCardButton {
-    display: block;
+    display: inline-block;
     width: 100%;
     padding: 8px 0;
     background-color: #007bff;
     color: white;
     text-align: center;
     border: none;
+    text-decoration: none;
+    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .bookCardButton:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
