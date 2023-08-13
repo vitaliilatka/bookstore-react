@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "../styles/BookCard.module.css";
 
 const BookCard = ({ book, addToCart }) => {
@@ -10,10 +10,12 @@ const BookCard = ({ book, addToCart }) => {
     return (
         <div className={styles.bookCard}>
             <img src={book.cover} alt={book.title} />
-
-            {/* <h3 className={styles.bookCardTitle}>{book.title}</h3>
-            <p className={styles.bookCardAuthor}>Author: {book.authorName}</p>
-            <Link to={`/books/${book.id}`} className={styles.viewDetailsBtn}>View Details</Link> */}
+            <div className={styles.bookDetails}>
+                <h3>{book.title}</h3>
+                <p>Author: {book.authorName}</p>
+                <p>${book.price}</p>
+            </div>
+            <Link to={`/books/${book.id}`} className={styles.viewDetailsBtn}>View Details</Link>
             <button onClick={handleAddToCart} className={styles.bookCardButton}>
                 Add to Cart
             </button>
