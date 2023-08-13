@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Harry",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "3",
         "genre": [
             "",
@@ -16,7 +16,7 @@
     {
         "id": "2",
         "title": "Batman",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "2",
         "genre": [
             "",
@@ -30,7 +30,7 @@
     {
         "id": "3",
         "title": "Rings",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "3",
         "genre": [
             "",
@@ -44,7 +44,7 @@
     {
         "id": "4",
         "title": "Hobbit",
-        "coverImageSrc": "",
+        "cover": "/images/hobbit.jpg",
         "rating": "4",
         "genre": [
             "",
@@ -58,7 +58,7 @@
     {
         "id": "5",
         "title": "Shrek",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "3",
         "genre": [
             "",
@@ -72,7 +72,7 @@
     {
         "id": "6",
         "title": "Moon",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "3",
         "genre": [
             "",
@@ -86,7 +86,7 @@
     {
         "id": "7",
         "title": "Mask",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "4",
         "genre": [
             "",
@@ -100,7 +100,7 @@
     {
         "id": "8",
         "title": "Matrix",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "5",
         "genre": [
             "",
@@ -114,7 +114,7 @@
     {
         "id": "9",
         "title": "Narnia",
-        "coverImageSrc": "",
+        "cover": "",
         "rating": "3",
         "genre": [
             "",

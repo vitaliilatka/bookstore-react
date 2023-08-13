@@ -1,0 +1,43 @@
+.bookCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bookCard img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bookCardAuthor {
+    font-size: 14px;
+    color: #636
+}
+
+.bookCardPrice {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bookCardButton {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bookCardButton:hover {
+    background-color: #0056b3;
+}

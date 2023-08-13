@@ -9,14 +9,14 @@ const BookCard = ({ book, addToCart }) => {
 
     return (
         <div className={styles.bookCard}>
-            <div className={styles.cardButtons}>
-                <h3>{book.title}</h3>
-                <p>Author: {book.authorName}</p>
-                <Link to={`/books/${book.id}`} className={styles.viewDetailsBtn}>View Details</Link>
-                <button onClick={handleAddToCart} className={styles.addToCartBtn}>
-                    Add to Cart
-                </button>
-            </div>
+            <img src={book.cover} alt={book.title} />
+
+            <h3 className={styles.bookCardTitle}>{book.title}</h3>
+            <p className={styles.bookCardAuthor}>Author: {book.authorName}</p>
+            <Link to={`/books/${book.id}`} className={styles.viewDetailsBtn}>View Details</Link>
+            <button onClick={handleAddToCart} className={styles.bookCardButton}>
+                Add to Cart
+            </button>
         </div>
     );
 };
