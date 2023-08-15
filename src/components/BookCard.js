@@ -9,21 +9,21 @@ const BookCard = ({ book, addToCart }) => {
 
     return (
         <div className={styles.bookCard}>
-            <img src={book.cover} alt={book.title} />
+            <img src={book.cover} alt={book.title} className={styles.bookCardImage} />
             <div className={styles.bookCardOverlay}>
                 <div className={styles.bookDetails}>
                     <h3 className={styles.bookCardTitle}>{book.title}</h3>
                     <p className={styles.bookCardAuthor}>Author: {book.authorName}</p>
                     <p className={styles.bookCardPrice}>${book.price}</p>
                 </div>
-                <div className={styles.bookCardButtons}>
-                    <Link to={`/books/${book.id}`} className={styles.bookCardButton}>
-                        View Details
-                    </Link>
-                    <button onClick={handleAddToCart} className={styles.bookCardButton}>
-                        Add to Cart
-                    </button>
-                </div>
+            </div>
+            <div className={styles.bookCardButtons}>
+                <Link to={`/books/${book.id}`} className={styles.bookCardButton}>
+                    View Details
+                </Link>
+                <button onClick={handleAddToCart} className={styles.bookCardButton}>
+                    Add to Cart
+                </button>
             </div>
         </div>
     );

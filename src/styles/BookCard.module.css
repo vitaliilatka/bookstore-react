@@ -19,13 +19,36 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
     pointer-events: none;
 }
 
 .bookCard:hover::before {
+    opacity: 1;
+}
+
+.bookCard:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bookCardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookCardOverlay:hover {
     opacity: 1;
 }
 
@@ -59,6 +82,12 @@
 .bookCardButtons {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.bookCardButtons:hover~.bookCard {
+    opacity: 0;
 }
 
 .bookCardButton {
