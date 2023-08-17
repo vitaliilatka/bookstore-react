@@ -19,9 +19,17 @@
         "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449868701l/11127._SY475_.jpg",
         "rating": "2",
         "genre": [
-            "",
-            "",
-            ""
+            "fantasy",
+            "classics",
+            "fiction",
+            "young-adult",
+            "childrens",
+            "christian",
+            "adventure",
+            "science-fiction-fantasy",
+            "christian-fiction",
+            "childrens",
+            "middle-grade"
         ],
         "price": "10.99",
         "description": "",

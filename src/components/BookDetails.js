@@ -13,10 +13,16 @@ const BookDetails = () => {
 
     return (
         <div className={styles.bookDetailsContainer}>
-            <h2 className={styles.bookTitle}>{book.title}</h2>
-            <p className={styles.bookAuthor}>Author: {book.authorName}</p>
-            <p className={styles.bookPrice}>Price: {book.price}</p>
-            <p className={styles.bookDescription}>{book.description}</p>
+            <div className={styles.bookImage}>
+                <img src={book.cover} alt={book.title} />
+            </div>
+            <div className={styles.bookInfo}>
+                <h2 className={styles.bookTitle}>{book.title}</h2>
+                <p className={styles.bookAuthor}>Author: {book.authorName}</p>
+                <p className={styles.bookDescription}>{book.description}</p>
+                <p>Rating: {book.rating}</p>
+                <p className={styles.bookPrice}>Price: {book.price}</p>
+            </div>
         </div>
     );
 };
