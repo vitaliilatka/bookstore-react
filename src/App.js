@@ -7,6 +7,7 @@ import Books from './components/Books';
 import About from './components/About';
 import BookCart from './components/BookCart';
 import BookDetails from './components/BookDetails';
+import BookCard from './components/BookCard';
 import SearchResults from './components/SearchResults';
 // import Search from './components/Search';
 import BookCartCheckOut from './components/BookCartCheckOut';
@@ -26,6 +27,10 @@ const App = () => {
           <Route path="/" element={<Books books={booksData} />} />
           <Route path="/about" element={<About />} />
           <Route path="/books/:id" element={<BookDetails />} />
+          <Route path="/card" element={<BookCard
+            key={booksData.id}
+            addToCart={addToCart}
+          />}></Route>
           <Route path="/cart" element={<BookCart />} />
           <Route path="/checkout" element={<BookCartCheckOut />} />
           <Route path="/search/:searchTerm" element={<SearchResults />} />

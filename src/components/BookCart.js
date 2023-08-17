@@ -4,7 +4,11 @@ import BookCard from "./BookCard";
 import styles from '../styles/BookCart.module.css';
 
 const BookCart = () => {
-    const { cartItems, removeFromCart } = useCart();
+    const { cartItems, dispatch, removeFromCart } = useCart();
+
+    const addToCart = (book) => {
+        dispatch({ type: "ADD TO Cart", book })
+    };
 
     // const total = cartItems
     //     .reduce((sum, book) => sum + parseFloat(book.price) * book.quantity, 0.0);
