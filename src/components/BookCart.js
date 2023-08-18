@@ -1,14 +1,11 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
-import BookCard from "./BookCard";
+import BookCartItem from "./BookCartItem";
+// import BookCard from "./BookCard";
 import styles from '../styles/BookCart.module.css';
 
 const BookCart = () => {
-    const { cartItems, dispatch, removeFromCart } = useCart();
-
-    const addToCart = (book) => {
-        dispatch({ type: "ADD TO Cart", book })
-    };
+    const { cartItems } = useCart();
 
     // const total = cartItems
     //     .reduce((sum, book) => sum + parseFloat(book.price) * book.quantity, 0.0);
@@ -19,16 +16,9 @@ const BookCart = () => {
             {cartItems.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (
-                <div>
-                    {cartItems.map((book) => (
-                        <BookCard
-                            key={book.id}
-                            book={book}
-                            showAddToCart={false}
-                            showRemove={true}
-                            onRemove={() => removeFromCart(book.id)}
-                        // onRemoveFromCart={() => removeFromCart(book.id)}
-                        />
+                <div className={styles.cartItems}>
+                    {cartItems.map((item) => (
+                        <BookCartItem key={item.book.id} item={item} />
                     ))}
                     <p className={styles.totalPrice}>Total: books</p>
                 </div>
