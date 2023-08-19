@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../styles/BookCartItem.module.css';
-import { useCart } from '../context/CartContext';
+import { CartContext } from '../context/CartContext';
 
 const BookCartItem = ({ book }) => {
     // const { title, authorName, price, cover, quantity } = item.book;
-    const { removeFromCart } = useCart();
+    const { removeFromCart, updateQuantity } = useContext(CartContext);
+    const [quantity, setQuantity] = useState(book.quantity);
+
+    const handleQuantityChange = (event) => {
+        const newQuantity = parseInt(event.target.value);
+        setQuantity(newQuantity);
+        updateQuantity(book.id, newQuantity);
+    };
+
     const handleRemove = () => {
         removeFromCart(book.id);
     };
@@ -15,13 +23,17 @@ const BookCartItem = ({ book }) => {
             <div className={styles.cartItemInfo}>
                 <h3 className={styles.bookTitle}>{book.title}</h3>
                 <p className={styles.bookAuthor}>Author: {book.authorName}</p>
-                <input type="number" value={1} onChange={() => { }} />
+                <input
+                    type="number"
+                    value={quantity}
+                    onChange={handleQuantityChange}
+                    min={1}
+                    max={10}
+                />
                 <button onClick={handleRemove}>Remove</button>
                 <p className={styles.bookPrice}>Price: ${book.price}</p>
                 {/*Add button for changing books in cart and delete book */}
             </div>
-            {/* <button onClick={() => removeFromCart()}>Remove</button> */}
-
         </div>
     );
 };
