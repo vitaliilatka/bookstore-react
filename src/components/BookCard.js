@@ -8,6 +8,7 @@ const BookCard = ({ book }) => {
 
     const handleAddToCart = () => {
         addToCart(book);
+        alert('Book has been added to cart');
     };
 
     return (

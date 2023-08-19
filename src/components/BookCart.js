@@ -1,11 +1,11 @@
-import React from "react";
-import { useCart } from "../context/CartContext";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import BookCartItem from "./BookCartItem";
 // import BookCard from "./BookCard";
 import styles from '../styles/BookCart.module.css';
 
 const BookCart = () => {
-    const { cartItems } = useCart();
+    const { cartItems } = useContext(CartContext);
 
     // const total = cartItems
     //     .reduce((sum, book) => sum + parseFloat(book.price) * book.quantity, 0.0);
@@ -18,8 +18,11 @@ const BookCart = () => {
             ) : (
                 <div className={styles.cartItems}>
                     {cartItems.map((item) => (
-                        <BookCartItem key={item.book.id} item={item} />
+                        <BookCartItem key={item.id} book={item} />
                     ))}
+                    <div className={styles.total}>
+                        Total: ${cartItems.reduce((total, item) => total + parseFloat(item.price), 0)}
+                    </div>
                     <p className={styles.totalPrice}>Total: books</p>
                 </div>
             )}

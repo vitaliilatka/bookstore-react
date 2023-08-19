@@ -1,23 +1,26 @@
 import React from 'react';
 import styles from '../styles/BookCartItem.module.css';
+import { useCart } from '../context/CartContext';
 
-const BookCartItem = ({ item }) => {
-    const { book, quantity } = item;
-    const bookId = item.book.id;
+const BookCartItem = ({ book }) => {
+    // const { title, authorName, price, cover, quantity } = item.book;
+    const { removeFromCart } = useCart();
+    const handleRemove = () => {
+        removeFromCart(book.id);
+    };
 
     return (
         <div className={styles.BookCartItemContainer}>
-            <div className={styles.cartItemImage}>
-                <img src={book.cover} alt={book.title} />
-            </div>
+            <img src={book.cover} alt={book.title} />
             <div className={styles.cartItemInfo}>
                 <h3 className={styles.bookTitle}>{book.title}</h3>
                 <p className={styles.bookAuthor}>Author: {book.authorName}</p>
-                <p>Quantity: {quantity}</p>
-                <p className={styles.bookPrice}>Price: ${book.price.toFixed(2)}</p>
+                <input type="number" value={1} onChange={() => { }} />
+                <button onClick={handleRemove}>Remove</button>
+                <p className={styles.bookPrice}>Price: ${book.price}</p>
                 {/*Add button for changing books in cart and delete book */}
             </div>
-
+            {/* <button onClick={() => removeFromCart()}>Remove</button> */}
 
         </div>
     );
