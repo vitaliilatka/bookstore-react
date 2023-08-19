@@ -11,6 +11,18 @@ export const CartProvider = ({ children }) => {
     const removeFromCart = (bookId) => {
         setCartItems((prevItems) => prevItems.filter((item) => item.id !== bookId));
     };
+
+    // const updateQuantity = (bookId, newQuantity) => {
+
+    // };
+
+    // const contextValue = {
+    //     cartItems,
+    //     addToCart,
+    //     removeFromCart,
+    //     updateQuantity,
+    // }
+
     return (
         <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
             {children}

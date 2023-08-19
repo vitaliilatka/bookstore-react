@@ -1,10 +1,10 @@
-import React from "react";
-import { useCart } from "../context/CartContext";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import styles from "../styles/BookCard.module.css";
 
 const BookCard = ({ book }) => {
-    const { addToCart } = useCart();
+    const { addToCart } = useContext(CartContext);
 
     const handleAddToCart = () => {
         addToCart(book);
