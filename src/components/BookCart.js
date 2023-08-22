@@ -1,29 +1,31 @@
 import React, { useContext } from "react";
-import { CartContext } from "../context/Context";
+import { Context } from "../context/Context";
 import BookCartItem from "./BookCartItem";
 // import BookCard from "./BookCard";
 import styles from '../styles/BookCart.module.css';
 
 const BookCart = () => {
-    const { cartItems } = useContext(CartContext);
+    const { carts } = useContext(Context);
 
-    // const total = cartItems
-    //     .reduce((sum, book) => sum + parseFloat(book.price) * book.quantity, 0.0);
+    const calculateTotal = () => {
+        return carts.reduce((total, cartItem) => {
+            return total + cartItem.book.price + cartItem.quantity;
+        }, 0);
+    };
 
     return (
         <div className={styles.bookCartContainer}>
             <h2>Cart</h2>
-            {cartItems.length === 0 ? (
+            {carts.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (
                 <div className={styles.cartItems}>
-                    {cartItems.map((item) => (
-                        <BookCartItem key={item.id} book={item} />
+                    {carts.map((cartItem) => (
+                        <BookCartItem key={cartItem.book.id} item={cartItem} />
                     ))}
                     <div className={styles.total}>
-                        Total: ${cartItems.reduce((total, item) => total + parseFloat(item.price), 0)}
+                        <p>Total: ${calculateTotal()}</p>
                     </div>
-                    <p className={styles.totalPrice}>Total: {cartItems.length} books</p>
                 </div>
             )}
         </div>

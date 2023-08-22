@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import styles from '../styles/BookCartItem.module.css';
-import { CartContext } from '../context/Context';
+import { Context } from '../context/Context';
 
 const BookCartItem = ({ book }) => {
     // const { title, authorName, price, cover, quantity } = item.book;
-    const { removeFromCart, updateQuantity } = useContext(CartContext);
+    const { removeFromCart, updateQuantity } = useContext(Context);
     const [quantity, setQuantity] = useState(book.quantity);
 
     const handleQuantityChange = (event) => {

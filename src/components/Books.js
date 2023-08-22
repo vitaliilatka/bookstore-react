@@ -1,22 +1,21 @@
-import React from 'react';
-import { useCart } from '../context/Context';
-// import booksData from '../data/books.json';
-import styles from '../styles/Books.module.css';
-import BookCard from './BookCard';
-// import Search from './Search';
+import React, { useContext } from "react";
+import { Context } from "../context/Context";
+import BookCard from "./BookCard";
+import styles from "../styles/Books.module.css";
 
-const Books = ({ books }) => {
-    const { addToCart } = useCart();
+const Books = () => {
+    const { searchedBooks, searchString } = useContext(Context);
 
     return (
-        <div className={styles.booksContainer}>
-
-            <h2>Avaliable Books</h2>
-            {/* <Search books={books} /> */}
-            <div className={styles.booksList}>
-                {books.map((book) => (
-                    <BookCard key={book.id} book={book} addToCart={() => addToCart(book)} className={styles.bookCard} />
-                ))}
+        <div className={styles.books}>
+            <h2>BookList</h2>
+            {searchedBooks.length > 0 ? (
+                <p>Search Results for: {searchString}</p>
+            ) : null}
+            <div className={styles.bookList}>
+                {searchedBooks.length === 0 ? searchedBooks.map(book => (
+                    <BookCard key={book.id} book={book} />
+                )) : null}
             </div>
         </div>
     );

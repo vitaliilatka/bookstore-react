@@ -1,14 +1,20 @@
 import React, { useContext } from "react";
-import { CartContext } from "../context/Context";
-import { Link } from "react-router-dom";
+import { Context } from "../context/Context";
+import { Link, useParams } from "react-router-dom";
 import styles from "../styles/BookCard.module.css";
 
-const BookCard = ({ book }) => {
-    const { addToCart } = useContext(CartContext);
+const Book = () => {
+    const { id } = useParams();
+    const { books, addCart } = useContext(Context);
+    const book = books.find(item => item.id === parseInt(id));
+
+    if (!book) {
+        return <div>book not found</div>;
+    }
 
     const handleAddToCart = () => {
-        addToCart(book);
-        alert('Book has been added to cart');
+        addCart(book.id);
+        alert('Book has been added to the cart');
     };
 
     return (
@@ -19,6 +25,8 @@ const BookCard = ({ book }) => {
                     <h3 className={styles.bookCardTitle}>{book.title}</h3>
                     <p className={styles.bookCardAuthor}>Author: {book.authorName}</p>
                     <p className={styles.bookCardPrice}>${book.price}</p>
+                    <p> Rating: {book.rating} stars</p>
+                    <p>{book.description}</p>
                 </div>
             </div>
             <div className={styles.bookCardButtons}>
@@ -33,4 +41,4 @@ const BookCard = ({ book }) => {
     );
 };
 
-export default BookCard;
+export default Book;

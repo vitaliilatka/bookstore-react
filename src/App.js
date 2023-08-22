@@ -11,13 +11,13 @@ import SearchResults from './components/SearchResults';
 // import Search from './components/Search';
 import BookCartCheckOut from './components/BookCartCheckOut';
 import { Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context/Context';
+import { Provider } from './context/Context';
 import booksData from './data/books.json';
 
 const App = () => {
 
   return (
-    <CartProvider>
+    <Provider>
       <div className='App'>
         <Header />
         <Navbar />
@@ -32,7 +32,7 @@ const App = () => {
           {/* <Route path="/search/:searchTerm" element={<BookDetails />} /> */}
         </Routes>
       </div>
-    </CartProvider>
+    </Provider>
   );
 }
 
