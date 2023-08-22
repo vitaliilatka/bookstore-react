@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/Context';
 // import booksData from '../data/books.json';
 import styles from '../styles/Books.module.css';
 import BookCard from './BookCard';

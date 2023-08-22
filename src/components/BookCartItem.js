@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import styles from '../styles/BookCartItem.module.css';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../context/Context';
 
 const BookCartItem = ({ book }) => {
     // const { title, authorName, price, cover, quantity } = item.book;

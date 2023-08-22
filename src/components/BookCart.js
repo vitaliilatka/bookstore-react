@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../context/Context";
 import BookCartItem from "./BookCartItem";
 // import BookCard from "./BookCard";
 import styles from '../styles/BookCart.module.css';
@@ -23,7 +23,7 @@ const BookCart = () => {
                     <div className={styles.total}>
                         Total: ${cartItems.reduce((total, item) => total + parseFloat(item.price), 0)}
                     </div>
-                    <p className={styles.totalPrice}>Total: books</p>
+                    <p className={styles.totalPrice}>Total: {cartItems.length} books</p>
                 </div>
             )}
         </div>
