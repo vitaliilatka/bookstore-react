@@ -1,21 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import { Context } from "../context/Context";
-import BookCard from "./BookCard";
+import Book from "./Book";
 import styles from "../styles/Books.module.css";
 
 const Books = () => {
-    const { searchedBooks, searchString } = useContext(Context);
+    const { books, clearSearch, searchedBooks, searchString } = useContext(Context);
 
     return (
         <div className={styles.books}>
-            <h2>BookList</h2>
-            {searchedBooks.length > 0 ? (
-                <p>Search Results for: {searchString}</p>
-            ) : null}
+            <h2>
+                {searchString === null ? (
+                    "All Books"
+                ) : (
+                    <Fragment>
+                        {" "}
+                        Searching for '{searchString}'
+                        <span onClick={() => clearSearch()} className={styles.button}>
+                            X
+                        </span>
+                    </Fragment>
+                )}
+            </h2>
+
             <div className={styles.bookList}>
-                {searchedBooks.length === 0 ? searchedBooks.map(book => (
-                    <BookCard key={book.id} book={book} />
-                )) : null}
+                {searchedBooks.length === 0
+                    ? books.map(book => {
+                        const { id } = book;
+                        return <Book key={id} bookDetails={book} />
+                    })
+                    : searchedBooks.map(book => {
+                        const { id } = book;
+                        return <Book key={id} bookDetails={book} />
+                    })}
             </div>
         </div>
     );

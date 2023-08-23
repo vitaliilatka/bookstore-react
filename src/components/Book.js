@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { Context } from "../context/Context";
 import { Link } from "react-router-dom";
+import styles from "../styles/Book.module.css";
 
 const Book = ({ bookDetails }) => {
     const { addCart } = useContext(Context);
     const {
-        id, title, cover, rating, price, authorName
+        id, title, cover, rating, price, authorName, authorId
     } = bookDetails;
 
     const handleAddCart = () => {
@@ -14,7 +15,7 @@ const Book = ({ bookDetails }) => {
 
     return (
         <div>
-            <div className={styles.cover - img}>
+            <div className={styles.coverImg}>
                 <img src={cover} alt=""></img>
                 <div className={styles.details}>
                     <div className={styles.content}>
@@ -25,14 +26,28 @@ const Book = ({ bookDetails }) => {
                         </h5>
                         <h6>
                             By{" "}
-                            <Link >
+                            <Link style={{ color: '#fff' }} to={"/author" + authorId}>
                                 {authorName}
                             </Link>
                         </h6>
+                        <p>
+                            <i></i> {rating}
+                        </p>
+                        <h4>Price: ${price}</h4>
                     </div>
-
                 </div>
             </div>
+
+            <div className={styles.bottom}>
+                <Link className={styles.details} to={"/book/details/" + id}>
+                    Details
+                </Link>
+                <button onClick={handleAddCart} className={styles.button}>
+                    Add Cart
+                </button>
+            </div>
         </div>
-    )
-}
+    );
+};
+
+export default Book;
