@@ -1,25 +1,26 @@
 .books {
-    padding: 2rem;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
 }
 
-/* .bookList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, min-max(250px, 1fr));
-    gap: 1.5rem;
-} */
-
-.booksList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .button {
     cursor: pointer;
-    color: #f00;
-    margin-left: 0.5rem;
+    color: #007bff;
+    margin-left: 5px;
 }
 
+.bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
 
 
 /* 
