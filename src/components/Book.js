@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../context/Context";
 import styles from "../styles/Book.module.css";
 
 const Book = ({ bookDetails }) => {
     const { id, title, authorName, price, cover } = bookDetails;
     const [isHovered, setIsHovered] = useState(false);
+    const { addCart } = useContext(Context);
+
+    const handleAddToCart = () => {
+        addCart(bookDetails.id);
+    }
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -36,7 +42,7 @@ const Book = ({ bookDetails }) => {
                         <Link to={`/books/${id}`} className={styles.viewDetails}>
                             View Details
                         </Link>
-                        <button className={styles.addToCart}>Add to Cart</button>
+                        <button className={styles.addToCart} onClick={handleAddToCart}>Add to Cart</button>
                     </div>
                 </div>
             )}
