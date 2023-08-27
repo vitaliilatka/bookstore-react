@@ -9,7 +9,7 @@ const BookCart = () => {
 
     const calculateTotal = () => {
         return carts.reduce((total, cartItem) => {
-            return total + cartItem.book.price + cartItem.quantity;
+            return total + cartItem.book.price * cartItem.quantity;
         }, 0);
     };
 

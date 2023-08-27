@@ -6,6 +6,9 @@
     justify-content: right;
     align-items: center;
     margin: 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navLink {
@@ -15,6 +18,19 @@
     margin-right: 10px;
 }
 
+.cartCount {
+    color: red;
+}
+
 .navLink:hover {
     text-decoration: underline;
+}
+
+.cartLink {
+    position: relative;
+    display: inline-block;
+}
+
+.cartText {
+    color: white;
 }
