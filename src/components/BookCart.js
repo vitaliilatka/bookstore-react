@@ -21,7 +21,7 @@ const BookCart = () => {
             ) : (
                 <div className={styles.cartItems}>
                     {carts.map((cartItem) => (
-                        <BookCartItem key={cartItem.book.id} item={cartItem} />
+                        <BookCartItem key={cartItem.book.id} book={cartItem.book} />
                     ))}
                     <div className={styles.total}>
                         <p>Total: ${calculateTotal()}</p>

@@ -39,7 +39,7 @@ export const Provider = ({ children }) => {
         });
     };
 
-    const updateCart = (id, quantity) => {
+    const updateQuantity = (id, quantity) => {
         dispatch({
             type: "UPDATE_CART",
             payload: { id, quantity }
@@ -82,7 +82,7 @@ export const Provider = ({ children }) => {
                 searchedBooks: state.searchedBooks,
                 searchString: state.searchString,
                 addCart,
-                updateCart,
+                updateQuantity,
                 removeCart,
                 getSearchString,
                 getSearchedBooks,

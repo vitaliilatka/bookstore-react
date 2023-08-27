@@ -4,7 +4,7 @@ import { Context } from '../context/Context';
 
 const BookCartItem = ({ book }) => {
     // const { title, authorName, price, cover, quantity } = item.book;
-    const { removeFromCart, updateQuantity } = useContext(Context);
+    const { removeCart, updateQuantity } = useContext(Context);
     const [quantity, setQuantity] = useState(book.quantity);
 
     const handleQuantityChange = (event) => {
@@ -14,7 +14,7 @@ const BookCartItem = ({ book }) => {
     };
 
     const handleRemove = () => {
-        removeFromCart(book.id);
+        removeCart(book.id);
     };
 
     return (
