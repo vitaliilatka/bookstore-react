@@ -31,8 +31,30 @@
 
     .bookCartItemContainer {
         width: calc(33.33 - 20px);
+        margin-bottom: 20px;
     }
 }
+
+.bookCartItemContainer {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bookCover {
+    width: 255px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
 
 
 .cartItem {
