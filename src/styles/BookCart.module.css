@@ -55,7 +55,14 @@
     transition: transform 0.2s ease-in-out;
 }
 
+.bookCartItemContainer:hover .bookCover {
+    transform: scale(1.05)
+}
 
+.cartItemInfo {
+    padding: 10px;
+    width: 100%;
+}
 
 .cartItem {
     display: flex;
