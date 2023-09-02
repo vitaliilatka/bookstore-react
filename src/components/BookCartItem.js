@@ -19,19 +19,21 @@ const BookCartItem = ({ book }) => {
 
     return (
         <div className={styles.BookCartItemContainer}>
-            <img src={book.cover} alt={book.title} />
+            <div className={styles.bookCover}>
+                <img src={book.cover} alt={book.title} />
+            </div>
             <div className={styles.cartItemInfo}>
                 <h3 className={styles.bookTitle}>{book.title}</h3>
                 <p className={styles.bookAuthor}>Author: {book.authorName}</p>
+                <p className={styles.bookPrice}>Price: ${book.price}</p>
                 <input
                     type="number"
-                    value={quantity}
+                    value={quantity || 1}
                     onChange={handleQuantityChange}
                     min={1}
                     max={10}
                 />
                 <button onClick={handleRemove}>Remove</button>
-                <p className={styles.bookPrice}>Price: ${book.price}</p>
                 {/*Add button for changing books in cart and delete book */}
             </div>
         </div>
